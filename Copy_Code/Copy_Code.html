@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Copy_Code</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+
+    <article>
+    <h3 style="margin-left: 100px;">HTML</h3>
+<!-- Target -->
+<textarea id="cp-1">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+	&lt;title&gt;&lt;/title&gt;
+	&lt;meta charset="UTF-8"&gt;
+	&lt;meta name="description" content=""&gt;
+	&lt;style&gt;
+		
+	&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;div class="main-container"&gt;
+
+
+
+&lt;/div&gt;&lt;!-- *===[ Main-Container-End ]===* --&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea>
+
+      <!-- Trigger -->
+      <button class="btn" data-clipboard-action="copy" data-clipboard-target="#cp-1">
+          <img src="files/copy.svg" style="width: 33px;" alt="Copy to clipboard"> Copy to clipboard
+      </button>
+    </article>
+
+    <article>
+    <h3 style="margin-left: 100px;">CSS</h3>
+<!-- Target -->
+<textarea id="cp-2">
+* {
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  margin: 0px;
+  padding: 0px;
+}
+.main-container {
+  background-color: aliceblue;
+  margin: 1px;
+  border: 2px solid #445e51;
+  padding: 9px;
+  min-height: 100vh;
+}
+header, .row {
+display: flex;  /* aligns all child elements (flex items) in a row */
+  border-radius: 8px;
+  border: 2px outset #81B29A;
+  background-color: #F4F1DE;
+  margin: 9px;
+  padding: 18px;
+  font-family: Georgia, serif;
+  font-size: 27px;
+  text-align: center;
+  color: #12623b;
+}
+
+.col {
+  flex: 1;        /* distributes space on the line equally among items */
+  border-radius: 8px;
+  border: 2px outset #81B29A;
+  background-color: #F2CC8F;
+  margin: 9px;
+  padding: 18px;
+}
+span {
+  font-weight: bold;
+}
+</textarea>
+
+      <!-- Trigger -->
+      <button class="btn" data-clipboard-action="copy" data-clipboard-target="#cp-2">
+          <img src="files/copy.svg" style="width: 33px;" alt="Copy to clipboard"> Copy to clipboard
+      </button>
+    </article>
+
+      <article>
+      <h3 style="margin-left: 100px;">Flex-Articles</h3>
+<!-- Target -->
+<textarea id="cp-3">
+&lt;section&gt;
+  &lt;header&gt;
+	&lt;div class="col"&gt;One&lt;/div&gt;&lt;span&gt;+&lt;/span&gt;
+	&lt;div class="col"&gt;To Tree&lt;/div&gt;&lt;span&gt;+&lt;/span&gt;
+	&lt;div class="col"&gt;Descriptions, or more&lt;/div&gt;
+  &lt;/header&gt;
+  &lt;div class="row"&gt;
+	&lt;div class="col"&gt;And&lt;/div&gt;&lt;span&gt;+&lt;/span&gt;
+	&lt;div class="col"&gt;Unlimited&lt;/div&gt;&lt;span&gt;+&lt;/span&gt;
+	&lt;div class="col"&gt;Steps&lt;/div&gt;&lt;span&gt;+&lt;/span&gt;
+	&lt;div class="col"&gt;To&lt;/div&gt;&lt;span&gt;+&lt;/span&gt;
+	&lt;div class="col"&gt;Shortcuts&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+</textarea>
+    
+        <!-- Trigger -->
+        <button class="btn" data-clipboard-action="copy" data-clipboard-target="#cp-3">
+          <img src="files/copy.svg" style="width: 33px;" alt="Copy to clipboard"> Copy to clipboard
+        </button>
+      </article>
+
+
+    <!-- 2. Include library -->
+    <script src="files/clipboard.min.js"></script>
+
+    <!-- 3. Instantiate clipboard -->
+    <script>
+      var clipboard = new ClipboardJS('.btn');
+
+      clipboard.on('success', function (e) {
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+      });
+
+      clipboard.on('error', function (e) {
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+      });
+    </script>
+  </body>
+</html>
